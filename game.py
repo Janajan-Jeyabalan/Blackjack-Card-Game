@@ -33,3 +33,10 @@ class Game:
             print("That is not a valid option.")
 
         return hit_or_stay == "hit"  # return true if player hit, false if stay
+
+    def deal_starting_cards(self):
+        self.player.hand = Hand(self.deck.deal(2))
+        self.dealer.hand = Hand(self.deck.deal(2))
+        self.dealer.hand.cards[1].hidden = True
+        print("You are dealt:", self.player.get_str_hand())
+        print("The dealer is dealt:", self.dealer.get_str_hand())
