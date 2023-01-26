@@ -25,4 +25,9 @@ class Card:
     def __init__(self, suit, value):
         self.suit = suit
         self.value = value
-        self.hidden = False     
+        self.hidden = False
+
+    def __str__(self):
+        if self.hidden:
+            return "Unknown"
+        return f"{self.SUIT_SYMBOLS[self.suit]}{self.VALUE_NAMES[self.value]}"     
