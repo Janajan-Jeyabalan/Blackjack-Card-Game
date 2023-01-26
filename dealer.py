@@ -4,3 +4,6 @@ class Dealer:
 
     def get_str_hand(self):
         return str(self.hand)
+
+    def hit(self, card):
+        self.hand.add(card)
