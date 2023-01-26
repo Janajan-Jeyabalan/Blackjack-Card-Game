@@ -15,3 +15,12 @@ class Hand:
 
         if aces == 0:
             return value
+
+        if value + 11 > 21:
+            return value + aces
+        elif aces == 1:
+            return value + 11
+        elif value + 11 + (aces - 1) <= 21:
+            return value + 11 + (aces - 1)
+        else:
+            return value + aces
