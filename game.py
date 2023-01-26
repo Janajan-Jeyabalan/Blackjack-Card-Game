@@ -10,3 +10,15 @@ class Game:
         self.dealer = dealer
         self.bet = None
         self.deck = Deck()
+
+    def place_bet(self):
+        while True:
+            bet = float(input("Place your bet: "))
+            if bet > self.player.balance:
+                print("You do not have sufficient funds.")
+            elif bet < self.MINIMUM_BET:
+                print(f"The minimum bet is ${self.MINIMUM_BET}.")
+            else:
+                self.bet = bet
+                self.player.balance -= bet
+                break
