@@ -22,3 +22,7 @@ class Game:
                 self.bet = bet
                 self.player.balance -= bet
                 break
+
+    def get_player_hit_or_stay(self):
+        while True:
+            hit_or_stay = input("Would you like to hit or stay? ").lower()
