@@ -20,4 +20,9 @@ class Card:
         11: "J",
         12: "Q",
         13: "K"
-    }  
+    }
+
+    def __init__(self, suit, value):
+        self.suit = suit
+        self.value = value
+        self.hidden = False     
