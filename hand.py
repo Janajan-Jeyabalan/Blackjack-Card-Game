@@ -27,3 +27,7 @@ class Hand:
 
     def add(self, card):
         self.cards.append(card)
+
+    def __str__(self):
+        string_cards = [str(card) for card in self.cards]
+        return ", ".join(string_cards)
