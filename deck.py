@@ -13,3 +13,6 @@ class Deck:
             for card in range(1, 14):
                 new_card = Card(suit, card)
                 self.cards.append(new_card)
+
+    def shuffle(self):
+        random.shuffle(self.cards)
