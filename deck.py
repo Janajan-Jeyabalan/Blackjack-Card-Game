@@ -16,3 +16,6 @@ class Deck:
 
     def shuffle(self):
         random.shuffle(self.cards)
+
+    def deal(self, num_cards):
+        dealt_cards = []
