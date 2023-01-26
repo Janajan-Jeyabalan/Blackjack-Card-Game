@@ -24,3 +24,6 @@ class Hand:
             return value + 11 + (aces - 1)
         else:
             return value + aces
+
+    def add(self, card):
+        self.cards.append(card)
