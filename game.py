@@ -56,3 +56,7 @@ class Game:
                 return True  # player lost
 
         return False  # player did not lose
+
+    def dealer_turn(self):
+        self.dealer.hand.cards[1].hidden = False
+        print("The dealer has:", self.dealer.get_str_hand())
