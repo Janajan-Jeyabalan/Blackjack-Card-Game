@@ -46,3 +46,13 @@ class Game:
             hit = self.get_player_hit_or_stay()
             if not hit:
                 break
+
+            new_card = self.deck.deal(1)[0]
+            self.player.hit(new_card)
+            print("You are dealt:", new_card)
+            print("You now have:", self.player.get_str_hand())
+
+            if self.player.hand.get_value() > 21:
+                return True  # player lost
+
+        return False  # player did not lose
