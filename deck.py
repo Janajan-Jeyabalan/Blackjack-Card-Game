@@ -19,3 +19,8 @@ class Deck:
 
     def deal(self, num_cards):
         dealt_cards = []
+
+        for idx in range(num_cards):
+            # we will treat the end of the list as the top of the deck
+            top_card = self.cards.pop()
+            dealt_cards.append(top_card)
