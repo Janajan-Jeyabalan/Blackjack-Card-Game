@@ -26,3 +26,10 @@ class Game:
     def get_player_hit_or_stay(self):
         while True:
             hit_or_stay = input("Would you like to hit or stay? ").lower()
+
+            if hit_or_stay in ["hit", "stay"]:
+                break
+
+            print("That is not a valid option.")
+
+        return hit_or_stay == "hit"  # return true if player hit, false if stay
