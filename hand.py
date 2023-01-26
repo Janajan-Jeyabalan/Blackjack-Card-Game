@@ -12,3 +12,6 @@ class Hand:
                 aces += 1
             else:
                 value += min(val, 10)
+
+        if aces == 0:
+            return value
