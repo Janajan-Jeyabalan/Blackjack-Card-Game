@@ -24,3 +24,6 @@ class Deck:
             # we will treat the end of the list as the top of the deck
             top_card = self.cards.pop()
             dealt_cards.append(top_card)
+
+        return dealt_cards
+
