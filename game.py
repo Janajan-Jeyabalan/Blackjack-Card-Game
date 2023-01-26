@@ -40,3 +40,9 @@ class Game:
         self.dealer.hand.cards[1].hidden = True
         print("You are dealt:", self.player.get_str_hand())
         print("The dealer is dealt:", self.dealer.get_str_hand())
+
+    def player_turn(self):
+        while True:
+            hit = self.get_player_hit_or_stay()
+            if not hit:
+                break
