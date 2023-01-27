@@ -60,3 +60,9 @@ class Game:
     def dealer_turn(self):
         self.dealer.hand.cards[1].hidden = False
         print("The dealer has:", self.dealer.get_str_hand())
+
+        while self.dealer.hand.get_value() <= 16:
+            new_card = self.deck.deal(1)[0]
+            self.dealer.hit(new_card)
+            print("The dealer hits and is dealt:", new_card)
+            print("The dealer has:", self.dealer.get_str_hand())
