@@ -131,3 +131,9 @@ class Game:
         self.determine_winner()
         self.reset_round()
 
+    def start_game(self):
+        while self.player.balance > 0:
+            if not self.confirm_start():
+                print(f"You left the game with ${self.player.balance}.")
+                break
+
