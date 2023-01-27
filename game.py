@@ -85,3 +85,9 @@ class Game:
         self.player.balance += self.bet * 2.5
         print(f"Blackjack! You win {self.bet * 1.5} :)")
         return True
+
+    def reset_round(self):
+        self.deck = Deck()
+        self.player.hand = None
+        self.dealer.hand = None
+        self.bet = None
