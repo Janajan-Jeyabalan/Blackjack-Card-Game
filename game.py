@@ -128,3 +128,6 @@ class Game:
             print(f"The dealer busts, you win ${self.bet} :)")
             return
 
+        self.determine_winner()
+        self.reset_round()
+
