@@ -75,3 +75,9 @@ class Game:
     def handle_blackjack(self):
         if self.player.hand.get_value() != 21:
             return False
+
+        if self.dealer.hand.get_value() == 21:
+            self.player.balance += self.bet
+            print(
+                "Both you and the dealer have Blackjack, you tie. Your bet has been returned.")
+            return True
