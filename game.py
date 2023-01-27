@@ -122,3 +122,9 @@ class Game:
             print(f"Your hand value is over 21 and you lose ${self.bet} :(")
             return
 
+        dealer_lost = self.dealer_turn()
+        if dealer_lost:
+            self.player.balance += self.bet * 2
+            print(f"The dealer busts, you win ${self.bet} :)")
+            return
+
