@@ -95,3 +95,12 @@ class Game:
     def determine_winner(self):
         player_value = self.player.hand.get_value()
         dealer_value = self.dealer.hand.get_value()
+
+        if dealer_value < player_value:
+            self.player.balance += self.bet * 2
+            print(f"You win ${self.bet}!")
+        elif dealer_value > player_value:
+            print(f"The dealer wins, you lose ${self.bet} :(")
+        else:
+            self.player.balance += self.bet
+            print("You tie. Your bet has been returned.")
