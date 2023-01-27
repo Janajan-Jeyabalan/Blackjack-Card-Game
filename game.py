@@ -104,3 +104,8 @@ class Game:
         else:
             self.player.balance += self.bet
             print("You tie. Your bet has been returned.")
+
+    def confirm_start(self):
+        answer = input(
+            f"You are starting with ${self.player.balance}, would you like to play? ").lower()
+        return answer in ['y', 'yes', 'start']
