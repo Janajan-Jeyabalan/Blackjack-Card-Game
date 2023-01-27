@@ -71,3 +71,7 @@ class Game:
             return True
 
         return False
+
+    def handle_blackjack(self):
+        if self.player.hand.get_value() != 21:
+            return False
