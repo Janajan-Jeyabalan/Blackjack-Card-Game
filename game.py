@@ -109,3 +109,8 @@ class Game:
         answer = input(
             f"You are starting with ${self.player.balance}, would you like to play? ").lower()
         return answer in ['y', 'yes', 'start']
+
+    def start_round(self):
+        self.place_bet()
+        self.deal_starting_cards()
+
