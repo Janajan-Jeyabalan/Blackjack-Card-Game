@@ -137,3 +137,9 @@ class Game:
                 print(f"You left the game with ${self.player.balance}.")
                 break
 
+            self.start_round()
+            print()
+        else:
+            print(
+                "You've ran out of money. Please restart this program to try again. Goodbye.")
+
