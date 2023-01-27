@@ -117,3 +117,8 @@ class Game:
         if self.handle_blackjack():
             return
 
+        player_lost = self.player_turn()
+        if player_lost:
+            print(f"Your hand value is over 21 and you lose ${self.bet} :(")
+            return
+
