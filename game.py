@@ -91,3 +91,7 @@ class Game:
         self.player.hand = None
         self.dealer.hand = None
         self.bet = None
+
+    def determine_winner(self):
+        player_value = self.player.hand.get_value()
+        dealer_value = self.dealer.hand.get_value()
