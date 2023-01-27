@@ -114,3 +114,6 @@ class Game:
         self.place_bet()
         self.deal_starting_cards()
 
+        if self.handle_blackjack():
+            return
+
