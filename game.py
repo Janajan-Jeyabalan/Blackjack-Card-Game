@@ -66,3 +66,8 @@ class Game:
             self.dealer.hit(new_card)
             print("The dealer hits and is dealt:", new_card)
             print("The dealer has:", self.dealer.get_str_hand())
+
+        if self.dealer.hand.get_value() > 21:
+            return True
+
+        return False
