@@ -81,3 +81,7 @@ class Game:
             print(
                 "Both you and the dealer have Blackjack, you tie. Your bet has been returned.")
             return True
+
+        self.player.balance += self.bet * 2.5
+        print(f"Blackjack! You win {self.bet * 1.5} :)")
+        return True
