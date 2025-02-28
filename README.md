@@ -1,5 +1,5 @@
 # Blackjack-Card-Game
-A simple command-line version of the popular card game, Blackjack.
+A simple command line version of the popular card game, Blackjack.
 
 ## Getting Started </br>
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
@@ -18,6 +18,6 @@ Follow the on-screen prompts to play the game. <br/>
 - Python -  The programming language used
 
 ## Author
-- Janajan Jeyabalan - https://github.com/JJ0304/
+- Janajan Jeyabalan - https://github.com/janajan-jeyabalan/
 
 
